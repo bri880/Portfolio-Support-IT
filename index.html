@@ -1,396 +1,392 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Brianna Madinko – Portfolio Support IT & Génie Biomédical</title>
-  <meta name="description" content="Portfolio Brianna Madinko — alternance support IT, objectif Master Ingénieur Biomédical." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{ --bg:#ffffff; --fg:#0b0b0f; --muted:rgba(11,11,15,.62); --card:rgba(11,11,15,.03); --border:rgba(11,11,15,.08); --shadow:0 18px 45px rgba(0,0,0,.08); }
-    html{scroll-behavior:smooth;} body{background:var(--bg);color:var(--fg);}
-    .link-underline{position:relative;display:inline-block;}
-    .link-underline::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:rgba(11,11,15,.75);transition:width .25s ease;}
-    .link-underline:hover::after{width:100%;}
-    .press:active{transform:translateY(1px) scale(.99);}
-    .chip{border:1px solid var(--border);background:rgba(255,255,255,.65);backdrop-filter:blur(10px);}
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
-    .reveal.is-visible{opacity:1;transform:translateY(0);}
-    .tooltip{opacity:0;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;pointer-events:none;}
-    .tooltip-wrap:hover .tooltip{opacity:1;transform:translateY(0);}
-    .stat-card{border:1px solid var(--border);background:var(--card);border-radius:1rem;padding:1.5rem;text-align:center;transition:all .3s ease;}
-    .stat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
-    .skill-bar{height:4px;border-radius:2px;background:rgba(11,11,15,.08);overflow:hidden;margin-top:8px;}
-    .skill-fill{height:100%;border-radius:2px;background:var(--fg);transition:width 1s ease;}
-    .badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.05em;}
-    .badge-green{background:#dcfce7;color:#166534;}
-    .badge-blue{background:#dbeafe;color:#1e40af;}
-    .badge-purple{background:#f3e8ff;color:#6b21a8;}
-  </style>
-  <script>tailwind.config={theme:{extend:{fontFamily:{script:["Great Vibes","cursive"],serif:["Gilda Display","serif"],sans:["Montserrat","system-ui","sans-serif"]}}}};</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Brianna Madinko — Support IT · Alternance 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0a0a0a;
+  --surface:#111111;
+  --surface2:#1a1a1a;
+  --border:#222222;
+  --text:#f0f0f0;
+  --muted:#888;
+  --accent:#6366f1;
+  --accent2:#8b5cf6;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(20px);background:rgba(10,10,10,.8);border-bottom:1px solid var(--border);}
+.nav-logo{font-weight:600;font-size:15px;letter-spacing:-.3px;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13px;transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-cta{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:500;text-decoration:none;transition:opacity .2s;}
+.nav-cta:hover{opacity:.85;}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding:100px 24px 60px;max-width:1100px;margin:0 auto;}
+.hero-inner{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:center;width:100%;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);border-radius:999px;padding:6px 14px;font-size:12px;color:#a5b4fc;margin-bottom:24px;}
+.hero-tag span{width:6px;height:6px;background:#4ade80;border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+h1{font-size:clamp(36px,5vw,58px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px;}
+h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero-sub{font-size:16px;color:var(--muted);margin-bottom:32px;max-width:480px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px;}
+.btn-primary{background:var(--accent);color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:500;text-decoration:none;transition:opacity .2s;}
+.btn-primary:hover{opacity:.85;}
+.btn-secondary{background:var(--surface2);color:var(--text);padding:12px 24px;border-radius:10px;font-size:14px;font-weight:500;text-decoration:none;border:1px solid var(--border);transition:background .2s;}
+.btn-secondary:hover{background:#222;}
+.badges{display:flex;flex-wrap:wrap;gap:8px;}
+.badge{background:var(--surface2);border:1px solid var(--border);padding:6px 14px;border-radius:8px;font-size:12px;color:var(--muted);}
+.hero-photo{width:300px;height:300px;border-radius:24px;overflow:hidden;border:1px solid var(--border);background:var(--surface2);justify-self:end;}
+.hero-photo img{width:100%;height:100%;object-fit:cover;}
+
+/* SECTIONS */
+section{padding:80px 24px;max-width:1100px;margin:0 auto;}
+.section-label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:12px;}
+.section-title{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-1px;margin-bottom:40px;}
+
+/* QUI SUIS-JE */
+.about-text{font-size:17px;color:var(--muted);line-height:1.8;max-width:680px;}
+.about-text strong{color:var(--text);}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:32px;}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:1px;background:var(--border);}
+.timeline-item{position:relative;margin-bottom:36px;}
+.timeline-dot{position:absolute;left:-28px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);}
+.timeline-year{font-size:11px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;}
+.timeline-title{font-size:16px;font-weight:600;margin-bottom:2px;}
+.timeline-sub{font-size:13px;color:var(--muted);}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+.skill-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+.skill-name{font-size:14px;font-weight:500;}
+.stars{color:var(--accent);font-size:13px;letter-spacing:2px;}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+.project-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;transition:border-color .2s,transform .2s;}
+.project-card:hover{border-color:var(--accent);transform:translateY(-2px);}
+.project-tag{font-size:11px;background:rgba(99,102,241,.15);color:#a5b4fc;padding:3px 10px;border-radius:999px;display:inline-block;margin-bottom:12px;}
+.project-title{font-size:16px;font-weight:600;margin-bottom:8px;}
+.project-desc{font-size:13px;color:var(--muted);}
+
+/* EXPERIENCE */
+.exp-grid{display:grid;gap:16px;}
+.exp-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;flex-wrap:wrap;gap:8px;}
+.exp-company{font-size:18px;font-weight:700;}
+.exp-date{font-size:12px;color:var(--muted);background:var(--surface2);padding:4px 12px;border-radius:999px;}
+.exp-role{font-size:14px;color:var(--accent);margin-bottom:14px;}
+.exp-missions{list-style:none;}
+.exp-missions li{font-size:14px;color:var(--muted);padding:4px 0;padding-left:16px;position:relative;}
+.exp-missions li::before{content:'→';position:absolute;left:0;color:var(--accent);}
+.exp-tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;}
+.exp-tool{background:var(--surface2);border:1px solid var(--border);font-size:11px;padding:3px 10px;border-radius:6px;color:var(--muted);}
+
+/* BIOMÉDICAL */
+.bio-card{background:linear-gradient(135deg,rgba(99,102,241,.08),rgba(139,92,246,.08));border:1px solid rgba(99,102,241,.2);border-radius:20px;padding:40px;}
+.bio-text{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:24px;}
+.bio-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.bio-step{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;}
+.bio-step-emoji{font-size:24px;margin-bottom:8px;}
+.bio-step-title{font-size:13px;font-weight:600;margin-bottom:4px;}
+.bio-step-sub{font-size:12px;color:var(--muted);}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+.contact-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;transition:border-color .2s;}
+.contact-card:hover{border-color:var(--accent);}
+.contact-icon{font-size:24px;margin-bottom:12px;}
+.contact-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:6px;}
+.contact-value{font-size:13px;font-weight:500;}
+.contact-value a{color:var(--text);text-decoration:none;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;color:var(--muted);font-size:13px;}
+
+/* DIVIDER */
+.divider{height:1px;background:var(--border);max-width:1100px;margin:0 auto;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-photo{justify-self:center;width:240px;height:240px;}
+  .nav-links{display:none;}
+  .bio-steps{grid-template-columns:1fr;}
+}
+</style>
 </head>
-<body class="font-sans">
+<body>
 
-  <header class="fixed top-0 left-0 right-0 z-50">
-    <div class="mx-auto max-w-6xl px-5">
-      <nav class="mt-4 rounded-2xl border" style="border-color:var(--border);background:rgba(255,255,255,.72);backdrop-filter:blur(14px);">
-        <div class="flex items-center justify-between px-5 py-4">
-          <a href="#home" class="font-script text-3xl md:text-4xl leading-none hover:opacity-70 transition-opacity">Brianna Madinko</a>
-          <div class="hidden md:flex items-center gap-8 text-xs tracking-[0.22em] uppercase">
-            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#home">Accueil</a>
-            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#a-propos">À propos</a>
-            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#ambition">Ambition</a>
-            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#competences">Compétences</a>
-            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#formation">Formation</a>
-            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#experience">Expérience</a>
-            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#contact">Contact</a>
-          </div>
-          <button id="btnMenu" class="md:hidden press rounded-xl px-3 py-2 border text-sm" style="border-color:var(--border);background:rgba(11,11,15,.03);">Menu</button>
-        </div>
-        <div id="mobileMenu" class="md:hidden hidden border-t px-5 py-4" style="border-color:var(--border);">
-          <div class="grid gap-3 text-xs tracking-[0.22em] uppercase">
-            <a class="text-black/70 hover:text-black" href="#home">Accueil</a>
-            <a class="text-black/70 hover:text-black" href="#a-propos">À propos</a>
-            <a class="text-black/70 hover:text-black" href="#ambition">Ambition</a>
-            <a class="text-black/70 hover:text-black" href="#competences">Compétences</a>
-            <a class="text-black/70 hover:text-black" href="#formation">Formation</a>
-            <a class="text-black/70 hover:text-black" href="#experience">Expérience</a>
-            <a class="text-black/70 hover:text-black" href="#contact">Contact</a>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <div class="h-28 md:h-32"></div>
-
-  <main>
-    <!-- HERO -->
-    <section id="home" class="px-5 py-12 md:py-20">
-      <div class="mx-auto max-w-6xl">
-        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div class="space-y-8 reveal">
-            <div class="inline-flex items-center gap-2">
-              <span class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-              </span>
-              <span class="text-xs tracking-widest uppercase text-green-700 font-semibold">Disponible dès septembre 2026 — Objectif Ingénieure Biomédicale</span>
-            </div>
-            <h1 class="font-script text-5xl md:text-6xl lg:text-7xl leading-tight">Brianna MADINKO</h1>
-            <div class="space-y-3">
-              <h2 class="font-serif text-2xl md:text-3xl text-black/80">Alternance Support IT & Systèmes</h2>
-              <p class="text-sm tracking-widest uppercase" style="color:var(--muted);">Rythme 2 semaines entreprise / 2 semaines école</p>
-            </div>
-            <p class="text-[15px] md:text-[16px] leading-relaxed" style="color:var(--muted);">
-              Étudiante en Bachelor Informatique à ESIEE-IT, passionnée par l'aide à la personne et les technologies au service du soin. Deux stages en support IT, un objectif clair : devenir ingénieure biomédicale pour mettre la technologie au service des patients.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <a href="cv-supportIT.pdf" download class="press inline-flex items-center gap-2 rounded-full px-7 py-4 text-xs tracking-[0.22em] uppercase bg-black text-white hover:bg-black/80 transition">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor"><path d="M9 11.25V2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.75 11.25V14.25C15.75 14.6478 15.592 15.0294 15.3107 15.3107C15.0294 15.592 14.6478 15.75 14.25 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V11.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.25 7.5L9 11.25L12.75 7.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Télécharger mon CV
-              </a>
-              <a href="#contact" class="press inline-flex items-center gap-2 rounded-full px-7 py-4 text-xs tracking-[0.22em] uppercase border text-black hover:bg-black hover:text-white transition" style="border-color:var(--border);">Me contacter</a>
-            </div>
-            <div class="flex flex-wrap gap-2 pt-2">
-              <span class="chip rounded-full px-4 py-2 text-xs" style="color:var(--muted);">Support N1/N2</span>
-              <span class="chip rounded-full px-4 py-2 text-xs" style="color:var(--muted);">Masterisation PC</span>
-              <span class="chip rounded-full px-4 py-2 text-xs" style="color:var(--muted);">Active Directory</span>
-              <span class="chip rounded-full px-4 py-2 text-xs" style="color:var(--muted);">Windows / Linux</span>
-              <span class="chip rounded-full px-4 py-2 text-xs" style="color:var(--muted);">Biomédical</span>
-            </div>
-          </div>
-          <div class="flex justify-center md:justify-end reveal">
-            <div class="relative w-[300px] h-[300px] md:w-[360px] md:h-[360px] rounded-full overflow-hidden" style="box-shadow:var(--shadow);border:1px solid var(--border);">
-              <img src="img.jpg" alt="Brianna Madinko" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-              <div class="pointer-events-none absolute inset-0" style="background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.45),transparent 55%);"></div>
-            </div>
-          </div>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 reveal">
-          <div class="stat-card"><div class="font-serif text-3xl mb-1">2</div><div class="text-xs tracking-widest uppercase" style="color:var(--muted);">Stages IT réalisés</div></div>
-          <div class="stat-card"><div class="font-serif text-3xl mb-1">3</div><div class="text-xs tracking-widest uppercase" style="color:var(--muted);">Ans de Bachelor</div></div>
-          <div class="stat-card"><div class="font-serif text-3xl mb-1">N6</div><div class="text-xs tracking-widest uppercase" style="color:var(--muted);">Titre RNCP visé</div></div>
-          <div class="stat-card"><div class="font-serif text-3xl mb-1">Sept.</div><div class="text-xs tracking-widest uppercase" style="color:var(--muted);">Disponible dès</div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- À PROPOS -->
-    <section id="a-propos" class="px-5 py-16 md:py-24" style="background:linear-gradient(to bottom,#fff,rgba(11,11,15,.015));">
-      <div class="mx-auto max-w-4xl">
-        <div class="reveal">
-          <h2 class="font-serif text-4xl md:text-5xl text-center mb-10">À propos</h2>
-          <div class="space-y-5 text-[15px] md:text-[16px] leading-relaxed text-center" style="color:var(--muted);">
-            <p>Je m'appelle Brianna, j'ai 19 ans et je suis étudiante en Bachelor Informatique à ESIEE-IT (Cergy-Pontoise). Mon parcours m'a amenée à réaliser deux stages en support IT — chez SPIE ICS à Malakoff et GrandVision à Montigny-le-Bretonneux — où j'ai appris à gérer des incidents réels, installer et masteriser des postes, et accompagner des utilisateurs avec pédagogie.</p>
-            <p>Ce que j'aime dans le support IT, c'est le contact humain : comprendre le problème, expliquer calmement, résoudre efficacement. Je suis à l'aise aussi bien avec les outils techniques (Windows, Linux, Active Directory, GLPI) qu'avec les utilisateurs non-techniques.</p>
-            <p>Je recherche une alternance à partir de septembre 2026, en rythme <strong>2 semaines entreprise / 2 semaines école</strong>, dans le support IT, les systèmes & réseaux — première étape vers mon objectif de carrière dans le génie biomédical.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AMBITION BIOMÉDICALE -->
-    <section id="ambition" class="px-5 py-16 md:py-24">
-      <div class="mx-auto max-w-4xl">
-        <div class="reveal">
-          <h2 class="font-serif text-4xl md:text-5xl text-center mb-4">Mon ambition</h2>
-          <p class="text-center text-sm tracking-widest uppercase mb-10" style="color:var(--muted);">Ingénieure Biomédicale — où l'informatique rencontre le soin</p>
-
-          <div class="rounded-2xl p-8 border" style="border-color:var(--border);background:var(--card);">
-            <div class="flex justify-center mb-6">
-              <span class="badge badge-purple text-sm px-4 py-2">Objectif long terme</span>
-            </div>
-            <p class="text-[15px] md:text-[16px] leading-relaxed text-center" style="color:var(--muted);">
-              Passionnée par l'aide à la personne depuis toujours, j'ai d'abord envisagé une carrière dans la médecine — d'où mon choix des spécialités SVT et Maths au lycée. En parallèle, j'ai découvert ma passion pour l'informatique, notamment tout ce qui touche au support technique et au service aux utilisateurs. Plutôt que de choisir entre les deux, j'ai cherché comment les combiner.
-              <br><br>
-              Le génie biomédical s'est imposé comme une évidence : un domaine où la technologie est au service du soin, où maintenir un appareil médical en état de marche, c'est directement contribuer à la santé et au bien-être des patients. C'est ce qui me motive profondément — mettre mes compétences informatiques et techniques au service du monde médical, pour un impact humain concret.
-            </p>
-          </div>
-
-          <div class="grid md:grid-cols-3 gap-6 mt-8">
-            <div class="stat-card">
-              <div class="text-2xl mb-2">🎓</div>
-              <div class="font-semibold text-sm mb-1">Aujourd'hui</div>
-              <div class="text-xs" style="color:var(--muted);">Bachelor Informatique ESIEE-IT + alternance Support IT</div>
-            </div>
-            <div class="stat-card">
-              <div class="text-2xl mb-2">📈</div>
-              <div class="font-semibold text-sm mb-1">Demain</div>
-              <div class="text-xs" style="color:var(--muted);">Master Ingénieur Biomédical</div>
-            </div>
-            <div class="stat-card">
-              <div class="text-2xl mb-2">🏥</div>
-              <div class="font-semibold text-sm mb-1">Objectif final</div>
-              <div class="text-xs" style="color:var(--muted);">Ingénieure biomédicale — maintenance équipements médicaux (IRM, scanners, respirateurs)</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMPÉTENCES -->
-    <section id="competences" class="px-5 py-16 md:py-24" style="background:linear-gradient(to bottom,rgba(11,11,15,.015),#fff);">
-      <div class="mx-auto max-w-6xl">
-        <div class="reveal">
-          <h2 class="font-serif text-4xl md:text-5xl text-center mb-12">Compétences</h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="rounded-2xl p-6 border" style="border-color:var(--border);background:var(--card);">
-              <h3 class="font-serif text-xl mb-6">Compétences techniques</h3>
-              <div class="space-y-5">
-                <div><div class="flex justify-between text-sm mb-1"><span>Support utilisateur N1/N2</span><span style="color:var(--muted)">Opérationnel</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
-                <div><div class="flex justify-between text-sm mb-1"><span>Masterisation & déploiement PC</span><span style="color:var(--muted)">Opérationnel</span></div><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
-                <div><div class="flex justify-between text-sm mb-1"><span>Windows / Linux</span><span style="color:var(--muted)">Intermédiaire</span></div><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
-                <div><div class="flex justify-between text-sm mb-1"><span>Active Directory</span><span style="color:var(--muted)">Bases solides</span></div><div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div></div>
-                <div><div class="flex justify-between text-sm mb-1"><span>GLPI / ServiceNow</span><span style="color:var(--muted)">Notions</span></div><div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div></div>
-                <div><div class="flex justify-between text-sm mb-1"><span>Sécurité de base</span><span style="color:var(--muted)">Opérationnel</span></div><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
-              </div>
-            </div>
-            <div class="rounded-2xl p-6 border" style="border-color:var(--border);background:var(--card);">
-              <h3 class="font-serif text-xl mb-6">Soft skills & langues</h3>
-              <div class="flex flex-wrap gap-2 mb-8">
-                <span class="chip rounded-full px-4 py-2 text-sm" style="color:var(--muted)">Écoute active</span>
-                <span class="chip rounded-full px-4 py-2 text-sm" style="color:var(--muted)">Rigueur</span>
-                <span class="chip rounded-full px-4 py-2 text-sm" style="color:var(--muted)">Autonomie</span>
-                <span class="chip rounded-full px-4 py-2 text-sm" style="color:var(--muted)">Communication</span>
-                <span class="chip rounded-full px-4 py-2 text-sm" style="color:var(--muted)">Esprit d'analyse</span>
-                <span class="chip rounded-full px-4 py-2 text-sm" style="color:var(--muted)">Adaptabilité</span>
-                <span class="chip rounded-full px-4 py-2 text-sm" style="color:var(--muted)">Sens du service</span>
-                <span class="chip rounded-full px-4 py-2 text-sm" style="color:var(--muted)">Travail en équipe</span>
-              </div>
-              <h3 class="font-serif text-xl mb-4">Langues</h3>
-              <div class="space-y-3">
-                <div class="flex justify-between items-center"><span class="text-sm">Français</span><span class="badge badge-green">Langue natale</span></div>
-                <div class="flex justify-between items-center"><span class="text-sm">Anglais</span><span class="badge badge-blue">Intermédiaire B1</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FORMATION -->
-    <section id="formation" class="px-5 py-16 md:py-24">
-      <div class="mx-auto max-w-6xl">
-        <div class="reveal">
-          <h2 class="font-serif text-4xl md:text-5xl text-center mb-12">Formation</h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="rounded-2xl p-6 border" style="border-color:var(--border);background:var(--card);">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl font-bold bg-black/5 px-3 py-1 rounded-full">B1</span>
-                <div><h3 class="font-serif text-xl">Première année — validée</h3><span class="badge badge-green mt-1">Acquis</span></div>
-              </div>
-              <ul class="space-y-2 text-sm" style="color:var(--muted);">
-                <li>✓ Programmation Java — bases logiques</li>
-                <li>✓ Architecture machines & systèmes d'exploitation</li>
-                <li>✓ Algorithmique et mathématiques</li>
-                <li>✓ Green IT & éco-informatique</li>
-                <li>✓ Anglais technique</li>
-                <li>✓ Découverte cybersécurité</li>
-                <li>✓ Projet Chip 8</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl p-6 border" style="border-color:var(--border);background:var(--card);">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl font-bold bg-black/5 px-3 py-1 rounded-full">B2</span>
-                <div><h3 class="font-serif text-xl">Deuxième année — en alternance</h3><span class="badge badge-blue mt-1">Rentrée sept. 2026</span></div>
-              </div>
-              <ul class="space-y-2 text-sm" style="color:var(--muted);">
-                <li>✓ Bases de données relationnelles (SQL)</li>
-                <li>✓ Réseaux informatiques (TCP/IP, dépannage)</li>
-                <li>✓ Security-By-Design</li>
-                <li>✓ Développement d'applications</li>
-                <li>✓ Gestion de projet & méthodes agiles</li>
-                <li>✓ UX Design</li>
-                <li>✓ Structures de données avancées</li>
-              </ul>
-              <div class="mt-4 pt-3 border-t text-xs" style="border-color:var(--border);color:var(--muted);"><strong>Rythme :</strong> 2 semaines entreprise / 2 semaines école</div>
-            </div>
-          </div>
-          <div class="mt-8 text-center">
-            <div class="inline-block rounded-full px-6 py-3 text-sm" style="background:rgba(11,11,15,.05);color:var(--muted);">
-              <strong>Bachelor « Développeur de Solutions Numériques Sécurisées »</strong> — Titre RNCP Niveau 6 — ESIEE-IT Cergy-Pontoise
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPÉRIENCE -->
-    <section id="experience" class="px-5 py-16 md:py-24" style="background:linear-gradient(to bottom,rgba(11,11,15,.015),#fff);">
-      <div class="mx-auto max-w-6xl">
-        <div class="reveal">
-          <h2 class="font-serif text-4xl md:text-5xl text-center mb-12">Expérience</h2>
-          <div class="grid md:grid-cols-3 gap-6">
-            <article class="group rounded-2xl p-8 border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="border-color:var(--border);background:var(--card);">
-              <div class="flex justify-between items-start mb-6"><span class="badge badge-green">Stage</span><span class="text-xs" style="color:var(--muted)">Oct. 2025</span></div>
-              <h3 class="font-serif text-xl mb-1">Support Informatique</h3>
-              <p class="text-sm font-semibold mb-4">SPIE ICS — Malakoff</p>
-              <ul class="space-y-2 text-sm" style="color:var(--muted);">
-                <li>→ Assistance utilisateurs & incidents N1/N2</li>
-                <li>→ Installation et masterisation de postes</li>
-                <li>→ Gestion des accès & sécurité</li>
-                <li>→ Maintenance logicielle</li>
-              </ul>
-            </article>
-            <article class="group rounded-2xl p-8 border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="border-color:var(--border);background:var(--card);">
-              <div class="flex justify-between items-start mb-6"><span class="badge badge-green">Stage</span><span class="text-xs" style="color:var(--muted)">Juil. 2025</span></div>
-              <h3 class="font-serif text-xl mb-1">Technicien IT</h3>
-              <p class="text-sm font-semibold mb-4">GrandVision — Montigny-le-Bretonneux</p>
-              <ul class="space-y-2 text-sm" style="color:var(--muted);">
-                <li>→ Support technique interne</li>
-                <li>→ Optimisation des processus IT</li>
-                <li>→ Maintenance réseau & sécurisation</li>
-                <li>→ Installation de postes</li>
-              </ul>
-            </article>
-            <article class="group rounded-2xl p-8 border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="border-color:var(--border);background:var(--card);">
-              <div class="flex justify-between items-start mb-6"><span class="badge badge-blue">Services</span><span class="text-xs" style="color:var(--muted)">2025–2026</span></div>
-              <h3 class="font-serif text-xl mb-1">Baby-sitting & Aide aux devoirs</h3>
-              <p class="text-sm font-semibold mb-4">Indépendante — Val d'Oise</p>
-              <ul class="space-y-2 text-sm" style="color:var(--muted);">
-                <li>→ Garde d'enfants (2 à 9 ans)</li>
-                <li>→ Aide aux devoirs (maths, français, anglais)</li>
-                <li>→ Organisation & responsabilités</li>
-                <li>→ Communication familles</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="px-5 py-16 md:py-24">
-      <div class="mx-auto max-w-4xl">
-        <div class="reveal">
-          <h2 class="font-serif text-4xl md:text-5xl text-center mb-4">Travaillons ensemble</h2>
-          <p class="text-center max-w-xl mx-auto mb-12 text-[15px]" style="color:var(--muted);">Disponible dès septembre 2026 (rythme 2 sem. / 2 sem.). N'hésitez pas à me contacter !</p>
-          <div class="grid md:grid-cols-3 gap-6">
-            <div class="group rounded-2xl p-8 border text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="border-color:var(--border);background:var(--card);">
-              <div class="inline-flex justify-center mb-5"><div class="rounded-full p-5 transition-all duration-500 bg-black/5 text-black group-hover:bg-black group-hover:text-white group-hover:scale-110"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor"><path d="M25.6667 8.16675L15.1772 14.8482C14.8212 15.055 14.4169 15.1639 14.0052 15.1639C13.5936 15.1639 13.1893 15.055 12.8333 14.8482L2.33333 8.16675" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M23.3333 4.66675H4.66666C3.378 4.66675 2.33333 5.71142 2.33333 7.00008V21.0001C2.33333 22.2887 3.378 23.3334 4.66666 23.3334H23.3333C24.622 23.3334 25.6667 22.2887 25.6667 21.0001V7.00008C25.6667 5.71142 24.622 4.66675 23.3333 4.66675Z" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-              <p class="text-xs tracking-[0.22em] uppercase mb-2 font-semibold">Email</p>
-              <a class="text-sm transition hover:opacity-70" href="mailto:briannamadinko@gmail.com" style="color:var(--muted);">briannamadinko@gmail.com</a>
-            </div>
-            <div class="group rounded-2xl p-8 border text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="border-color:var(--border);background:var(--card);">
-              <div class="inline-flex justify-center mb-5"><div class="rounded-full p-5 transition-all duration-500 bg-black/5 text-black group-hover:bg-black group-hover:text-white group-hover:scale-110"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor"><path d="M16.1373 19.3293C16.3783 19.4399 16.6497 19.4652 16.907 19.4009C17.1642 19.3367 17.3919 19.1867 17.5525 18.9758L17.9666 18.4333C18.184 18.1435 18.4658 17.9083 18.7898 17.7463C19.1138 17.5843 19.4711 17.4999 19.8333 17.4999H23.3333C23.9522 17.4999 24.5456 17.7458 24.9832 18.1833C25.4208 18.6209 25.6666 19.2144 25.6666 19.8333V23.3333C25.6666 23.9521 25.4208 24.5456 24.9832 24.9832C24.5456 25.4208 23.9522 25.6666 23.3333 25.6666C17.7638 25.6666 12.4223 23.4541 8.48407 19.5158C4.54581 15.5776 2.33331 10.2361 2.33331 4.66659C2.33331 4.04775 2.57915 3.45425 3.01673 3.01667C3.45432 2.57908 4.04781 2.33325 4.66665 2.33325H8.16665C8.78548 2.33325 9.37898 2.57908 9.81656 3.01667C10.2541 3.45425 10.5 4.04775 10.5 4.66659V8.16659C10.5 8.52882 10.4156 8.88609 10.2536 9.21008C10.0916 9.53408 9.85644 9.81591 9.56665 10.0333L9.02065 10.4428C8.80647 10.6063 8.6555 10.8389 8.5934 11.1012C8.5313 11.3634 8.56189 11.639 8.67998 11.8813C10.2744 15.1198 12.8968 17.7388 16.1373 19.3293Z" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-              <p class="text-xs tracking-[0.22em] uppercase mb-2 font-semibold">Téléphone</p>
-              <a class="text-sm transition hover:opacity-70" href="tel:+33771218264" style="color:var(--muted);">+33 7 71 21 82 64</a>
-            </div>
-            <div class="group rounded-2xl p-8 border text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="border-color:var(--border);background:var(--card);">
-              <div class="inline-flex justify-center mb-5"><div class="rounded-full p-5 transition-all duration-500 bg-black/5 text-black group-hover:bg-black group-hover:text-white group-hover:scale-110"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor"><path d="M23.3334 11.6666C23.3334 17.4918 16.8712 23.5584 14.7012 25.4321C14.499 25.5841 14.253 25.6663 14 25.6663C13.7471 25.6663 13.501 25.5841 13.2989 25.4321C11.1289 23.5584 4.66669 17.4918 4.66669 11.6666C4.66669 9.19123 5.65002 6.81726 7.40036 5.06692C9.1507 3.31658 11.5247 2.33325 14 2.33325C16.4754 2.33325 18.8493 3.31658 20.5997 5.06692C22.35 6.81726 23.3334 9.19123 23.3334 11.6666Z" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 15.1667C15.933 15.1667 17.5 13.5997 17.5 11.6667C17.5 9.73375 15.933 8.16675 14 8.16675C12.067 8.16675 10.5 9.73375 10.5 11.6667C10.5 13.5997 12.067 15.1667 14 15.1667Z" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-              <p class="text-xs tracking-[0.22em] uppercase mb-2 font-semibold">Localisation</p>
-              <p class="text-sm" style="color:var(--muted);">Saint-Ouen-l'Aumône (95)<br>Île-de-France</p>
-            </div>
-          </div>
-          <div class="mt-10 text-center">
-            <a href="#home" class="press inline-flex items-center gap-2 rounded-full px-7 py-4 text-xs tracking-[0.22em] uppercase border hover:bg-black hover:text-white transition" style="border-color:var(--border);">Retour en haut ↑</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="mt-10">
-    <div class="bg-black text-white">
-      <div class="mx-auto max-w-6xl px-5 py-14">
-        <div class="grid md:grid-cols-3 gap-10 mb-10">
-          <div>
-            <h3 class="font-script text-4xl mb-4">Brianna Madinko</h3>
-            <p class="text-sm text-white/60 leading-relaxed">Étudiante en Bachelor Informatique à ESIEE-IT — alternance sept. 2026 — objectif Ingénieure Biomédicale.</p>
-          </div>
-          <div>
-            <h4 class="font-serif text-xl mb-4">Navigation</h4>
-            <ul class="space-y-2 text-sm text-white/60">
-              <li><a class="hover:text-white transition" href="#home">Accueil</a></li>
-              <li><a class="hover:text-white transition" href="#a-propos">À propos</a></li>
-              <li><a class="hover:text-white transition" href="#ambition">Mon ambition</a></li>
-              <li><a class="hover:text-white transition" href="#competences">Compétences</a></li>
-              <li><a class="hover:text-white transition" href="#formation">Formation</a></li>
-              <li><a class="hover:text-white transition" href="#experience">Expérience</a></li>
-              <li><a class="hover:text-white transition" href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-serif text-xl mb-4">Me suivre</h4>
-            <div class="flex gap-3">
-              <a class="group press inline-flex items-center justify-center rounded-full w-11 h-11 bg-white/10 text-white border border-white/10 transition-all duration-300 hover:bg-white hover:text-black" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13.3333 6.66675C14.6594 6.66675 15.9312 7.19353 16.8688 8.13121C17.8065 9.0689 18.3333 10.3407 18.3333 11.6667V17.5001H15V11.6667C15 11.2247 14.8244 10.8008 14.5118 10.4882C14.1993 10.1757 13.7753 10.0001 13.3333 10.0001C12.8913 10.0001 12.4674 10.1757 12.1548 10.4882C11.8422 10.8008 11.6666 11.2247 11.6666 11.6667V17.5001H8.33331V11.6667C8.33331 10.3407 8.8601 9.0689 9.79778 8.13121C10.7355 7.19353 12.0072 6.66675 13.3333 6.66675Z" stroke="currentColor" stroke-width="1.66667"/><path d="M5.00002 7.5H1.66669V17.5H5.00002V7.5Z" stroke="currentColor" stroke-width="1.66667"/><path d="M3.33335 5.00008C4.25383 5.00008 5.00002 4.25389 5.00002 3.33341C5.00002 2.41294 4.25383 1.66675 3.33335 1.66675C2.41288 1.66675 1.66669 2.41294 1.66669 3.33341C1.66669 4.25389 2.41288 5.00008 3.33335 5.00008Z" stroke="currentColor" stroke-width="1.66667"/></svg>
-              </a>
-              <a class="group press inline-flex items-center justify-center rounded-full w-11 h-11 bg-white/10 text-white border border-white/10 transition-all duration-300 hover:bg-white hover:text-black" href="https://github.com" target="_blank" aria-label="GitHub">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 18.3334V15.0001C12.6159 13.9562 12.3166 12.9085 11.6667 12.0834C14.1667 12.0834 16.6667 10.4167 16.6667 7.50008C16.7333 6.45841 16.4417 5.43341 15.8333 4.58341C16.0667 3.62508 16.0667 2.62508 15.8333 1.66675C15.8333 1.66675 15 1.66675 13.3333 2.91675C11.1333 2.50008 8.86666 2.50008 6.66666 2.91675C4.99999 1.66675 4.16666 1.66675 4.16666 1.66675C3.91666 2.62508 3.91666 3.62508 4.16666 4.58341C3.55988 5.42998 3.26538 6.46074 3.33332 7.50008C3.33332 10.4167 5.83332 12.0834 8.33332 12.0834C8.00832 12.4917 7.76666 12.9584 7.62499 13.4584C7.48332 13.9584 7.44166 14.4834 7.49999 15.0001V18.3334" stroke="currentColor" stroke-width="1.66667"/><path d="M7.50002 14.9999C3.74169 16.6666 3.33335 13.3333 1.66669 13.3333" stroke="currentColor" stroke-width="1.66667"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="border-t border-white/10 pt-6 text-center text-sm text-white/60">
-          <span id="year"></span> © Brianna Madinko — Portfolio alternance & Ingénieure Biomédicale
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <div class="fixed bottom-6 right-6 z-50 tooltip-wrap">
-    <a id="waBtn" href="#" class="press inline-flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-transform duration-300 hover:-translate-y-1" style="background:#25D366;">
-      <svg width="26" height="26" viewBox="0 0 34 34" fill="none"><path d="M28.237 5.69839C25.3789 2.84027 21.4307 1.07227 17.0691 1.07227C8.34703 1.07227 1.27502 8.1432 1.27502 16.8663C1.27502 19.7691 2.05809 22.488 3.4234 24.8255L3.38302 24.7511L1.14221 32.9345L9.51365 30.7383C11.6928 31.9485 14.2928 32.6604 17.0595 32.6604H17.0659C25.788 32.6572 32.8568 25.5852 32.8568 16.8631C32.8568 12.5037 31.0909 8.55758 28.236 5.69945L28.237 5.69839ZM17.0659 29.9925H17.0606C14.5966 29.9925 12.29 29.3125 10.3211 28.1299L10.3807 28.1628L9.90146 27.8791L4.93427 29.1828L6.25921 24.3389L5.94684 23.8427C4.68777 21.8643 3.93977 19.4535 3.93977 16.8674C3.93977 9.61902 9.81646 3.74233 17.0648 3.74233C24.3132 3.74233 30.1899 9.61902 30.1899 16.8674C30.1899 24.1158 24.3153 29.9925 17.0659 29.9925Z" fill="white"/></svg>
-    </a>
-    <div class="tooltip absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-black text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap">Écris-moi sur WhatsApp</div>
+<nav>
+  <div class="nav-logo">Brianna Madinko</div>
+  <div class="nav-links">
+    <a href="#about">À propos</a>
+    <a href="#parcours">Parcours</a>
+    <a href="#skills">Compétences</a>
+    <a href="#experience">Expérience</a>
+    <a href="#contact">Contact</a>
   </div>
+  <a href="cv-supportIT.pdf" download class="nav-cta">Télécharger le CV</a>
+</nav>
 
-  <script>
-    const btnMenu=document.getElementById("btnMenu");
-    const mobileMenu=document.getElementById("mobileMenu");
-    if(btnMenu&&mobileMenu){btnMenu.addEventListener("click",()=>mobileMenu.classList.toggle("hidden"));mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>mobileMenu.classList.add("hidden")));}
-    const waBtn=document.getElementById("waBtn");
-    if(waBtn)waBtn.href="https://wa.me/33771218264?text="+encodeURIComponent("Bonjour Brianna, je suis intéressé(e) par votre profil pour une alternance en support IT.");
-    document.getElementById("year").textContent=new Date().getFullYear();
-    const reveals=document.querySelectorAll(".reveal");
-    const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("is-visible");});},{threshold:0.12});
-    reveals.forEach(el=>io.observe(el));
-  </script>
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">
+        <span></span>
+        Disponible dès septembre 2026
+      </div>
+      <h1>Brianna<br><span>MADINKO</span></h1>
+      <p class="hero-sub">Bachelor Informatique · ESIEE-IT<br>Recherche une alternance Support IT · Systèmes · Réseaux</p>
+      <div class="hero-btns">
+        <a href="cv-supportIT.pdf" download class="btn-primary">⬇ Télécharger mon CV</a>
+        <a href="#contact" class="btn-secondary">Me contacter</a>
+      </div>
+      <div class="badges">
+        <span class="badge">Support IT</span>
+        <span class="badge">Windows</span>
+        <span class="badge">Linux</span>
+        <span class="badge">Active Directory</span>
+        <span class="badge">Microsoft 365</span>
+        <span class="badge">GLPI</span>
+        <span class="badge">Java</span>
+        <span class="badge">SQL</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="img.jpg" alt="Brianna Madinko"/>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- QUI SUIS-JE -->
+<section id="about">
+  <div class="section-label">À propos</div>
+  <div class="section-title">Qui suis-je ?</div>
+  <p class="about-text">
+    Je suis étudiante en Bachelor Informatique à <strong>ESIEE-IT</strong>. Après deux stages en support informatique chez <strong>SPIE ICS</strong> et <strong>GrandVision</strong>, j'ai découvert que ce qui me motive le plus est d'aider les utilisateurs à résoudre leurs problèmes techniques. Aujourd'hui je recherche une <strong>alternance</strong> pour développer mes compétences en support IT, systèmes et réseaux — avant de poursuivre vers le <strong>génie biomédical</strong>.
+  </p>
+</section>
+
+<div class="divider"></div>
+
+<!-- PARCOURS -->
+<section id="parcours">
+  <div class="section-label">Parcours</div>
+  <div class="section-title">Mon parcours</div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">Juil. 2025</div>
+      <div class="timeline-title">Stage — GrandVision</div>
+      <div class="timeline-sub">Technicien IT · Montigny-le-Bretonneux</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">Oct. 2025</div>
+      <div class="timeline-title">Stage — SPIE ICS</div>
+      <div class="timeline-sub">Support IT · Malakoff</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">Sept. 2025 – 2028</div>
+      <div class="timeline-title">Bachelor Informatique</div>
+      <div class="timeline-sub">ESIEE-IT · Cergy-Pontoise · Titre RNCP N6</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot" style="background:#4ade80;"></div>
+      <div class="timeline-year">Sept. 2026</div>
+      <div class="timeline-title">Alternance en recherche </div>
+      <div class="timeline-sub">Support IT · Systèmes & Réseaux · Rythme 2 sem / 2 sem</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot" style="background:var(--accent2);"></div>
+      <div class="timeline-year">Objectif</div>
+      <div class="timeline-title">Master Ingénieure Biomédicale</div>
+      <div class="timeline-sub">Maintenance équipements médicaux · IRM, scanners, respirateurs</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMPÉTENCES -->
+<section id="skills">
+  <div class="section-label">Compétences</div>
+  <div class="section-title">Mes compétences</div>
+  <div class="skills-grid">
+    <div class="skill-card"><span class="skill-name">Support utilisateur</span><span class="stars">★★★★☆</span></div>
+    <div class="skill-card"><span class="skill-name">Windows</span><span class="stars">★★★★☆</span></div>
+    <div class="skill-card"><span class="skill-name">Linux</span><span class="stars">★★★☆☆</span></div>
+    <div class="skill-card"><span class="skill-name">Active Directory</span><span class="stars">★★★☆☆</span></div>
+    <div class="skill-card"><span class="skill-name">Microsoft 365</span><span class="stars">★★★★☆</span></div>
+    <div class="skill-card"><span class="skill-name">Masterisation PC</span><span class="stars">★★★★☆</span></div>
+    <div class="skill-card"><span class="skill-name">GLPI / ServiceNow</span><span class="stars">★★☆☆☆</span></div>
+    <div class="skill-card"><span class="skill-name">Java</span><span class="stars">★★★☆☆</span></div>
+    <div class="skill-card"><span class="skill-name">SQL</span><span class="stars">★★★☆☆</span></div>
+    <div class="skill-card"><span class="skill-name">Sécurité IT</span><span class="stars">★★★☆☆</span></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJETS -->
+<section id="projects">
+  <div class="section-label">Projets</div>
+  <div class="section-title">Mes projets</div>
+  <div class="projects-grid">
+    <div class="project-card">
+      <span class="project-tag">Java</span>
+      <div class="project-title">Chip-8</div>
+      <div class="project-desc">Émulateur Chip-8 développé en Java. Projet réalisé en première année de Bachelor à ESIEE-IT.</div>
+    </div>
+    <div class="project-card">
+      <span class="project-tag">HTML / CSS / JS</span>
+      <div class="project-title">Portfolio</div>
+      <div class="project-desc">Ce portfolio — conçu et développé pour présenter mon profil aux recruteurs de manière moderne et minimaliste.</div>
+    </div>
+    <div class="project-card">
+      <span class="project-tag">À venir</span>
+      <div class="project-title">Projet B2</div>
+      <div class="project-desc">Projet systèmes d'information en Java — prévu en deuxième année de Bachelor.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPÉRIENCE -->
+<section id="experience">
+  <div class="section-label">Expérience</div>
+  <div class="section-title">Mes expériences</div>
+  <div class="exp-grid">
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-company">SPIE ICS</div>
+        <div class="exp-date">Oct. 2025</div>
+      </div>
+      <div class="exp-role">Stage Support IT · Malakoff</div>
+      <ul class="exp-missions">
+        <li>Assistance aux utilisateurs & résolution d'incidents N1/N2</li>
+        <li>Installation et masterisation de postes</li>
+        <li>Gestion des accès & sensibilisation sécurité</li>
+        <li>Maintenance logicielle</li>
+      </ul>
+      <div class="exp-tools">
+        <span class="exp-tool">Windows</span>
+        <span class="exp-tool">Active Directory</span>
+        <span class="exp-tool">Masterisation</span>
+        <span class="exp-tool">Support N1/N2</span>
+        <span class="exp-tool">Sécurité</span>
+      </div>
+    </div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-company">GrandVision</div>
+        <div class="exp-date">Juil. 2025</div>
+      </div>
+      <div class="exp-role">Stage Technicien IT · Montigny-le-Bretonneux</div>
+      <ul class="exp-missions">
+        <li>Support technique interne</li>
+        <li>Optimisation des processus IT</li>
+        <li>Maintenance réseau & sécurisation des systèmes</li>
+        <li>Préparation et installation de postes</li>
+      </ul>
+      <div class="exp-tools">
+        <span class="exp-tool">Réseaux</span>
+        <span class="exp-tool">Windows</span>
+        <span class="exp-tool">Déploiement</span>
+        <span class="exp-tool">Sécurité</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BIOMÉDICAL -->
+<section id="bio">
+  <div class="section-label">Ambition</div>
+  <div class="section-title">Pourquoi le biomédical ?</div>
+  <div class="bio-card">
+    <p class="bio-text">Mon objectif est de devenir <strong style="color:var(--text);">ingénieure biomédicale</strong> afin de mettre mes compétences informatiques au service des professionnels de santé et des patients. Passionnée par l'aide à la personne depuis toujours, j'ai choisi l'informatique pour sa rigueur technique — et le biomédical pour son impact humain direct. Le support IT est pour moi une première étape solide vers cette spécialisation.</p>
+    <div class="bio-steps">
+      <div class="bio-step">
+        <div class="bio-step-emoji">🎓</div>
+        <div class="bio-step-title">Aujourd'hui</div>
+        <div class="bio-step-sub">Bachelor Informatique + alternance Support IT</div>
+      </div>
+      <div class="bio-step">
+        <div class="bio-step-emoji">📈</div>
+        <div class="bio-step-title">Demain</div>
+        <div class="bio-step-sub">Master Ingénieur Biomédical</div>
+      </div>
+      <div class="bio-step">
+        <div class="bio-step-emoji">🏥</div>
+        <div class="bio-step-title">Objectif</div>
+        <div class="bio-step-sub">Maintenance équipements médicaux — IRM, scanners, respirateurs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Contact</div>
+  <div class="section-title">Me contacter</div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-icon">📧</div>
+      <div class="contact-label">Email</div>
+      <div class="contact-value"><a href="mailto:briannamadinko@gmail.com">briannamadinko@gmail.com</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">📞</div>
+      <div class="contact-label">Téléphone</div>
+      <div class="contact-value"><a href="tel:+33771218264">07 71 21 82 64</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">📍</div>
+      <div class="contact-label">Localisation</div>
+      <div class="contact-value">Saint-Ouen-l'Aumône (95)</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">🟢</div>
+      <div class="contact-label">Disponibilité</div>
+      <div class="contact-value">Septembre 2026</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">⬇</div>
+      <div class="contact-label">CV</div>
+      <div class="contact-value"><a href="cv-supportIT.pdf" download>Télécharger</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">💼</div>
+      <div class="contact-label">LinkedIn</div>
+      <div class="contact-value"><a href="https://linkedin.com" target="_blank">Voir le profil</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Brianna Madinko · Bachelor Informatique ESIEE-IT · Alternance Support IT · Objectif Ingénieure Biomédicale</p>
+</footer>
+
 </body>
 </html>
-
