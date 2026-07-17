@@ -7,37 +7,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --bg:#0a0a0a;
-  --surface:#111111;
-  --surface2:#1a1a1a;
-  --border:#222222;
-  --text:#f0f0f0;
-  --muted:#888;
-  --accent:#6366f1;
-  --accent2:#8b5cf6;
-}
+:root{--bg:#0a0a0a;--surface:#111111;--surface2:#1a1a1a;--border:#222222;--text:#f0f0f0;--muted:#888;--accent:#6366f1;--accent2:#8b5cf6;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(20px);background:rgba(10,10,10,.8);border-bottom:1px solid var(--border);}
-.nav-logo{font-weight:600;font-size:15px;letter-spacing:-.3px;}
+.nav-logo{font-weight:600;font-size:15px;}
 .nav-links{display:flex;gap:28px;}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:13px;transition:color .2s;}
 .nav-links a:hover{color:var(--text);}
 .nav-cta{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:500;text-decoration:none;transition:opacity .2s;}
 .nav-cta:hover{opacity:.85;}
-
-/* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;padding:100px 24px 60px;max-width:1100px;margin:0 auto;}
-.hero-inner{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:center;width:100%;}
+.hero-inner{display:grid;grid-template-columns:1fr 300px;gap:60px;align-items:center;width:100%;}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);border-radius:999px;padding:6px 14px;font-size:12px;color:#a5b4fc;margin-bottom:24px;}
 .hero-tag span{width:6px;height:6px;background:#4ade80;border-radius:50%;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
 h1{font-size:clamp(36px,5vw,58px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px;}
 h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.hero-sub{font-size:16px;color:var(--muted);margin-bottom:32px;max-width:480px;}
+.hero-sub{font-size:16px;color:var(--muted);margin-bottom:32px;}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px;}
 .btn-primary{background:var(--accent);color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:500;text-decoration:none;transition:opacity .2s;}
 .btn-primary:hover{opacity:.85;}
@@ -45,19 +32,13 @@ h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-
 .btn-secondary:hover{background:#222;}
 .badges{display:flex;flex-wrap:wrap;gap:8px;}
 .badge{background:var(--surface2);border:1px solid var(--border);padding:6px 14px;border-radius:8px;font-size:12px;color:var(--muted);}
-.hero-photo{width:300px;height:300px;border-radius:24px;overflow:hidden;border:1px solid var(--border);background:var(--surface2);justify-self:end;}
+.hero-photo{width:280px;height:280px;border-radius:24px;overflow:hidden;border:1px solid var(--border);background:var(--surface2);justify-self:end;}
 .hero-photo img{width:100%;height:100%;object-fit:cover;}
-
-/* SECTIONS */
 section{padding:80px 24px;max-width:1100px;margin:0 auto;}
 .section-label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:12px;}
 .section-title{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-1px;margin-bottom:40px;}
-
-/* QUI SUIS-JE */
 .about-text{font-size:17px;color:var(--muted);line-height:1.8;max-width:680px;}
 .about-text strong{color:var(--text);}
-
-/* TIMELINE */
 .timeline{position:relative;padding-left:32px;}
 .timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:1px;background:var(--border);}
 .timeline-item{position:relative;margin-bottom:36px;}
@@ -65,22 +46,16 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
 .timeline-year{font-size:11px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;}
 .timeline-title{font-size:16px;font-weight:600;margin-bottom:2px;}
 .timeline-sub{font-size:13px;color:var(--muted);}
-
-/* SKILLS */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
 .skill-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
 .skill-name{font-size:14px;font-weight:500;}
 .stars{color:var(--accent);font-size:13px;letter-spacing:2px;}
-
-/* PROJECTS */
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
 .project-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;transition:border-color .2s,transform .2s;}
 .project-card:hover{border-color:var(--accent);transform:translateY(-2px);}
 .project-tag{font-size:11px;background:rgba(99,102,241,.15);color:#a5b4fc;padding:3px 10px;border-radius:999px;display:inline-block;margin-bottom:12px;}
 .project-title{font-size:16px;font-weight:600;margin-bottom:8px;}
 .project-desc{font-size:13px;color:var(--muted);}
-
-/* EXPERIENCE */
 .exp-grid{display:grid;gap:16px;}
 .exp-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;}
 .exp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;flex-wrap:wrap;gap:8px;}
@@ -88,12 +63,10 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
 .exp-date{font-size:12px;color:var(--muted);background:var(--surface2);padding:4px 12px;border-radius:999px;}
 .exp-role{font-size:14px;color:var(--accent);margin-bottom:14px;}
 .exp-missions{list-style:none;}
-.exp-missions li{font-size:14px;color:var(--muted);padding:4px 0;padding-left:16px;position:relative;}
+.exp-missions li{font-size:14px;color:var(--muted);padding:4px 0 4px 16px;position:relative;}
 .exp-missions li::before{content:'→';position:absolute;left:0;color:var(--accent);}
 .exp-tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;}
 .exp-tool{background:var(--surface2);border:1px solid var(--border);font-size:11px;padding:3px 10px;border-radius:6px;color:var(--muted);}
-
-/* BIOMÉDICAL */
 .bio-card{background:linear-gradient(135deg,rgba(99,102,241,.08),rgba(139,92,246,.08));border:1px solid rgba(99,102,241,.2);border-radius:20px;padding:40px;}
 .bio-text{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:24px;}
 .bio-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
@@ -101,8 +74,6 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
 .bio-step-emoji{font-size:24px;margin-bottom:8px;}
 .bio-step-title{font-size:13px;font-weight:600;margin-bottom:4px;}
 .bio-step-sub{font-size:12px;color:var(--muted);}
-
-/* CONTACT */
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
 .contact-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;transition:border-color .2s;}
 .contact-card:hover{border-color:var(--accent);}
@@ -110,20 +81,9 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
 .contact-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:6px;}
 .contact-value{font-size:13px;font-weight:500;}
 .contact-value a{color:var(--text);text-decoration:none;}
-
-/* FOOTER */
 footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;color:var(--muted);font-size:13px;}
-
-/* DIVIDER */
 .divider{height:1px;background:var(--border);max-width:1100px;margin:0 auto;}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .hero-inner{grid-template-columns:1fr;}
-  .hero-photo{justify-self:center;width:240px;height:240px;}
-  .nav-links{display:none;}
-  .bio-steps{grid-template-columns:1fr;}
-}
+@media(max-width:768px){.hero-inner{grid-template-columns:1fr;}.hero-photo{justify-self:center;width:220px;height:220px;}.nav-links{display:none;}.bio-steps{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -140,14 +100,10 @@ footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;co
   <a href="CV_BRIANNA_MADINKO.pdf" download class="nav-cta">Télécharger le CV</a>
 </nav>
 
-<!-- HERO -->
 <div id="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">
-        <span></span>
-        Disponible dès septembre 2026
-      </div>
+      <div class="hero-tag"><span></span>Disponible dès septembre 2026</div>
       <h1>Brianna<br><span>MADINKO</span></h1>
       <p class="hero-sub">Bachelor Informatique · ESIEE-IT<br>Recherche une alternance Support IT · Systèmes · Réseaux</p>
       <div class="hero-btns">
@@ -165,66 +121,34 @@ footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;co
         <span class="badge">SQL</span>
       </div>
     </div>
-    <div class="hero-photo">
-      <img src="img.jpg" alt="Brianna Madinko"/>
-    </div>
+    <div class="hero-photo"><img src="img.jpg" alt="Brianna Madinko"/></div>
   </div>
 </div>
 
 <div class="divider"></div>
 
-<!-- QUI SUIS-JE -->
 <section id="about">
   <div class="section-label">À propos</div>
   <div class="section-title">Qui suis-je ?</div>
-  <p class="about-text">
-    Je suis étudiante en Bachelor Informatique à <strong>ESIEE-IT</strong>. Après deux stages en support informatique chez <strong>SPIE ICS</strong> et <strong>GrandVision</strong>, j'ai découvert que ce qui me motive le plus est d'aider les utilisateurs à résoudre leurs problèmes techniques. Aujourd'hui je recherche une <strong>alternance</strong> pour développer mes compétences en support IT, systèmes et réseaux — avant de poursuivre vers le <strong>génie biomédical</strong>.
-  </p>
+  <p class="about-text">Je suis étudiante en Bachelor Informatique à <strong>ESIEE-IT</strong>. Après deux stages en support informatique chez <strong>SPIE ICS</strong> et <strong>GrandVision</strong>, j'ai découvert que ce qui me motive le plus est d'aider les utilisateurs à résoudre leurs problèmes techniques. Aujourd'hui je recherche une <strong>alternance</strong> pour développer mes compétences en support IT, systèmes et réseaux — avant de poursuivre vers le <strong>génie biomédical</strong>.</p>
 </section>
 
 <div class="divider"></div>
 
-<!-- PARCOURS -->
 <section id="parcours">
   <div class="section-label">Parcours</div>
   <div class="section-title">Mon parcours</div>
   <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">Juil. 2025</div>
-      <div class="timeline-title">Stage — GrandVision</div>
-      <div class="timeline-sub">Technicien IT · Montigny-le-Bretonneux</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">Oct. 2025</div>
-      <div class="timeline-title">Stage — SPIE ICS</div>
-      <div class="timeline-sub">Support IT · Malakoff</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">Sept. 2025 – 2028</div>
-      <div class="timeline-title">Bachelor Informatique</div>
-      <div class="timeline-sub">ESIEE-IT · Cergy-Pontoise · Titre RNCP N6</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot" style="background:#4ade80;"></div>
-      <div class="timeline-year">Sept. 2026</div>
-      <div class="timeline-title">Alternance en recherche </div>
-      <div class="timeline-sub">Support IT · Systèmes & Réseaux · Rythme 2 sem / 2 sem</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot" style="background:var(--accent2);"></div>
-      <div class="timeline-year">Objectif</div>
-      <div class="timeline-title">Master Ingénieure Biomédicale</div>
-      <div class="timeline-sub">Maintenance équipements médicaux · IRM, scanners, respirateurs</div>
-    </div>
+    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">Juil. 2025</div><div class="timeline-title">Stage — GrandVision</div><div class="timeline-sub">Technicien IT · Montigny-le-Bretonneux</div></div>
+    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">Oct. 2025</div><div class="timeline-title">Stage — SPIE ICS</div><div class="timeline-sub">Support IT · Malakoff</div></div>
+    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">Sept. 2025 – 2028</div><div class="timeline-title">Bachelor Informatique</div><div class="timeline-sub">ESIEE-IT · Cergy-Pontoise · Titre RNCP N6</div></div>
+    <div class="timeline-item"><div class="timeline-dot" style="background:#4ade80;"></div><div class="timeline-year">Sept. 2026</div><div class="timeline-title">Alternance recherchée 🎯</div><div class="timeline-sub">Support IT · Systèmes & Réseaux · Rythme 2 sem / 2 sem</div></div>
+    <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent2);"></div><div class="timeline-year">Objectif</div><div class="timeline-title">Master Ingénieure Biomédicale</div><div class="timeline-sub">Maintenance équipements médicaux · IRM, scanners, respirateurs</div></div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- COMPÉTENCES -->
 <section id="skills">
   <div class="section-label">Compétences</div>
   <div class="section-title">Mes compétences</div>
@@ -244,41 +168,24 @@ footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;co
 
 <div class="divider"></div>
 
-<!-- PROJETS -->
 <section id="projects">
   <div class="section-label">Projets</div>
   <div class="section-title">Mes projets</div>
   <div class="projects-grid">
-    <div class="project-card">
-      <span class="project-tag">Java</span>
-      <div class="project-title">Chip-8</div>
-      <div class="project-desc">Émulateur Chip-8 développé en Java. Projet réalisé en première année de Bachelor à ESIEE-IT.</div>
-    </div>
-    <div class="project-card">
-      <span class="project-tag">HTML / CSS / JS</span>
-      <div class="project-title">Portfolio</div>
-      <div class="project-desc">Ce portfolio — conçu et développé pour présenter mon profil aux recruteurs de manière moderne et minimaliste.</div>
-    </div>
-    <div class="project-card">
-      <span class="project-tag">À venir</span>
-      <div class="project-title">Projet B2</div>
-      <div class="project-desc">Projet systèmes d'information en Java — prévu en deuxième année de Bachelor.</div>
-    </div>
+    <div class="project-card"><span class="project-tag">Java</span><div class="project-title">Chip-8</div><div class="project-desc">Émulateur Chip-8 développé en Java. Projet réalisé en première année de Bachelor à ESIEE-IT.</div></div>
+    <div class="project-card"><span class="project-tag">HTML / CSS / JS</span><div class="project-title">Portfolio</div><div class="project-desc">Ce portfolio — conçu et développé pour présenter mon profil aux recruteurs de manière moderne et minimaliste.</div></div>
+    <div class="project-card"><span class="project-tag">À venir</span><div class="project-title">Projet B2</div><div class="project-desc">Projet systèmes d'information en Java — prévu en deuxième année de Bachelor.</div></div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- EXPÉRIENCE -->
 <section id="experience">
   <div class="section-label">Expérience</div>
   <div class="section-title">Mes expériences</div>
   <div class="exp-grid">
     <div class="exp-card">
-      <div class="exp-header">
-        <div class="exp-company">SPIE ICS</div>
-        <div class="exp-date">Oct. 2025</div>
-      </div>
+      <div class="exp-header"><div class="exp-company">SPIE ICS</div><div class="exp-date">Oct. 2025</div></div>
       <div class="exp-role">Stage Support IT · Malakoff</div>
       <ul class="exp-missions">
         <li>Assistance aux utilisateurs & résolution d'incidents N1/N2</li>
@@ -286,19 +193,10 @@ footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;co
         <li>Gestion des accès & sensibilisation sécurité</li>
         <li>Maintenance logicielle</li>
       </ul>
-      <div class="exp-tools">
-        <span class="exp-tool">Windows</span>
-        <span class="exp-tool">Active Directory</span>
-        <span class="exp-tool">Masterisation</span>
-        <span class="exp-tool">Support N1/N2</span>
-        <span class="exp-tool">Sécurité</span>
-      </div>
+      <div class="exp-tools"><span class="exp-tool">Windows</span><span class="exp-tool">Active Directory</span><span class="exp-tool">Masterisation</span><span class="exp-tool">Support N1/N2</span><span class="exp-tool">Sécurité</span></div>
     </div>
     <div class="exp-card">
-      <div class="exp-header">
-        <div class="exp-company">GrandVision</div>
-        <div class="exp-date">Juil. 2025</div>
-      </div>
+      <div class="exp-header"><div class="exp-company">GrandVision</div><div class="exp-date">Juil. 2025</div></div>
       <div class="exp-role">Stage Technicien IT · Montigny-le-Bretonneux</div>
       <ul class="exp-missions">
         <li>Support technique interne</li>
@@ -306,87 +204,42 @@ footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;co
         <li>Maintenance réseau & sécurisation des systèmes</li>
         <li>Préparation et installation de postes</li>
       </ul>
-      <div class="exp-tools">
-        <span class="exp-tool">Réseaux</span>
-        <span class="exp-tool">Windows</span>
-        <span class="exp-tool">Déploiement</span>
-        <span class="exp-tool">Sécurité</span>
-      </div>
+      <div class="exp-tools"><span class="exp-tool">Réseaux</span><span class="exp-tool">Windows</span><span class="exp-tool">Déploiement</span><span class="exp-tool">Sécurité</span></div>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- BIOMÉDICAL -->
 <section id="bio">
   <div class="section-label">Ambition</div>
   <div class="section-title">Pourquoi le biomédical ?</div>
   <div class="bio-card">
     <p class="bio-text">Mon objectif est de devenir <strong style="color:var(--text);">ingénieure biomédicale</strong> afin de mettre mes compétences informatiques au service des professionnels de santé et des patients. Passionnée par l'aide à la personne depuis toujours, j'ai choisi l'informatique pour sa rigueur technique — et le biomédical pour son impact humain direct. Le support IT est pour moi une première étape solide vers cette spécialisation.</p>
     <div class="bio-steps">
-      <div class="bio-step">
-        <div class="bio-step-emoji">🎓</div>
-        <div class="bio-step-title">Aujourd'hui</div>
-        <div class="bio-step-sub">Bachelor Informatique + alternance Support IT</div>
-      </div>
-      <div class="bio-step">
-        <div class="bio-step-emoji">📈</div>
-        <div class="bio-step-title">Demain</div>
-        <div class="bio-step-sub">Master Ingénieur Biomédical</div>
-      </div>
-      <div class="bio-step">
-        <div class="bio-step-emoji">🏥</div>
-        <div class="bio-step-title">Objectif</div>
-        <div class="bio-step-sub">Maintenance équipements médicaux — IRM, scanners, respirateurs</div>
-      </div>
+      <div class="bio-step"><div class="bio-step-emoji">🎓</div><div class="bio-step-title">Aujourd'hui</div><div class="bio-step-sub">Bachelor Informatique + alternance Support IT</div></div>
+      <div class="bio-step"><div class="bio-step-emoji">📈</div><div class="bio-step-title">Demain</div><div class="bio-step-sub">Master Ingénieur Biomédical</div></div>
+      <div class="bio-step"><div class="bio-step-emoji">🏥</div><div class="bio-step-title">Objectif</div><div class="bio-step-sub">Maintenance équipements médicaux — IRM, scanners, respirateurs</div></div>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-label">Contact</div>
   <div class="section-title">Me contacter</div>
   <div class="contact-grid">
-    <div class="contact-card">
-      <div class="contact-icon">📧</div>
-      <div class="contact-label">Email</div>
-      <div class="contact-value"><a href="mailto:briannamadinko@gmail.com">briannamadinko@gmail.com</a></div>
-    </div>
-    <div class="contact-card">
-      <div class="contact-icon">📞</div>
-      <div class="contact-label">Téléphone</div>
-      <div class="contact-value"><a href="tel:+33771218264">07 71 21 82 64</a></div>
-    </div>
-    <div class="contact-card">
-      <div class="contact-icon">📍</div>
-      <div class="contact-label">Localisation</div>
-      <div class="contact-value">Saint-Ouen-l'Aumône (95)</div>
-    </div>
-    <div class="contact-card">
-      <div class="contact-icon">🟢</div>
-      <div class="contact-label">Disponibilité</div>
-      <div class="contact-value">Septembre 2026</div>
-    </div>
-    <div class="contact-card">
-      <div class="contact-icon">⬇</div>
-      <div class="contact-label">CV</div>
-      <div class="contact-value"><a href="CV_BRIANNA_MADINKO.pdf" download>Télécharger</a></div>
-    </div>
-    <div class="contact-card">
-      <div class="contact-icon">💼</div>
-      <div class="contact-label">LinkedIn</div>
-      <div class="contact-value"><a href="https://linkedin.com" target="_blank">Voir le profil</a></div>
-    </div>
+    <div class="contact-card"><div class="contact-icon">📧</div><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:briannamadinko@gmail.com">briannamadinko@gmail.com</a></div></div>
+    <div class="contact-card"><div class="contact-icon">📞</div><div class="contact-label">Téléphone</div><div class="contact-value"><a href="tel:+33771218264">07 71 21 82 64</a></div></div>
+    <div class="contact-card"><div class="contact-icon">📍</div><div class="contact-label">Localisation</div><div class="contact-value">Saint-Ouen-l'Aumône (95)</div></div>
+    <div class="contact-card"><div class="contact-icon">🟢</div><div class="contact-label">Disponibilité</div><div class="contact-value">Septembre 2026</div></div>
+    <div class="contact-card"><div class="contact-icon">⬇</div><div class="contact-label">CV</div><div class="contact-value"><a href="CV_BRIANNA_MADINKO.pdf" download>Télécharger</a></div></div>
+    <div class="contact-card"><div class="contact-icon">💼</div><div class="contact-label">LinkedIn</div><div class="contact-value"><a href="https://linkedin.com" target="_blank">Voir le profil</a></div></div>
   </div>
 </section>
 
-<footer>
-  <p>© 2026 Brianna Madinko · Bachelor Informatique ESIEE-IT · Alternance Support IT · Objectif Ingénieure Biomédicale</p>
-</footer>
+<footer>© 2026 Brianna Madinko · Bachelor Informatique ESIEE-IT · Alternance Support IT · Objectif Ingénieure Biomédicale</footer>
 
 </body>
 </html>
